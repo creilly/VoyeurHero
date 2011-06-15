@@ -1,0 +1,8 @@
+[Wed Jun 15 11:12:08 2011] [error] [client 128.32.186.5] File does not exist: /home/al/Archimedes-Lever/StartUp/startup/static/images/jet.jpg, referer: http://voyeurhero.jetphillips.info/
+[Wed Jun 15 11:12:58 2011] [error] [client 128.32.186.5] File does not exist: /home/al/Archimedes-Lever/StartUp/startup/static/images/jet.jpg, referer: http://voyeurhero.jetphillips.info/
+[Wed Jun 15 11:22:50 2011] [error] [client 128.32.186.5] File does not exist: /home/al/Archimedes-Lever/StartUp/startup/static/images/jet.jpg, referer: http://voyeurhero.jetphillips.info/
+[Wed Jun 15 11:22:51 2011] [error] [client 128.32.186.5] File does not exist: /home/al/Archimedes-Lever/StartUp/startup/static/images/jet.jpg, referer: http://voyeurhero.jetphillips.info/
+[Wed Jun 15 11:25:30 2011] [error] [client 128.32.186.5] Symbolic link not allowed or link target not accessible: /home/jack/VoyeurHero/static/css/style.css, referer: http://voyeurhero.jetphillips.info/
+[Wed Jun 15 11:25:30 2011] [error] [client 128.32.186.5] Symbolic link not allowed or link target not accessible: /home/jack/VoyeurHero/static/images/jet.jpg, referer: http://voyeurhero.jetphillips.info/
+[Wed Jun 15 11:25:39 2011] [error] [client 128.32.186.5] Symbolic link not allowed or link target not accessible: /home/jack/VoyeurHero/static/css/style.css, referer: http://voyeurhero.jetphillips.info/
+[Wed Jun 15 11:28:19 2011] [error] [client 128.32.186.5] File does not exist: /home/jack/VoyeurHero/static/images/bg.png, referer: http://voyeurhero.jetphillips.info/
