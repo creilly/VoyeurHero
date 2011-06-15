@@ -411,10 +411,34 @@ li:last-child .hentry, #content > .hentry {border: 0; margin: 0;}
 		margin-left:auto;
 		margin-right:auto;
 		text-align: center;
-		border: 3px solid #ccc;
-		margin-top: .3em; margin-bottom: .3em;
+		border: 3px solid #000;
+		margin-top: 2em; margin-bottom: 2em;
 	}
 	
 	.category .category_title {
-		font-size: larger;
+		font-size: 30pt;
+		background-color: #faf0e6;
+		color: #333;
 	}
+
+	.post {
+	    background-color: #ddd;
+	    border: 2px solid #000;
+	    margin: 5px;
+	    }
+
+	.post img {
+	    border: 2px solid #bbb;
+	    border-radius: 4px;
+	    box-shadow: 4px 4px 4px #444;
+	    max-width: 100%;
+	   }
+
+	.post .post_title {
+	    font-size: 25pt;
+	    font-family: courier;
+	    }
+	.post .post_date {
+	    text-align: left;
+	    font-size: 10px;
+	    }

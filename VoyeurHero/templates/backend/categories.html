@@ -1,11 +1,14 @@
 {% for category in categories %}
 <div class="category">
 	<div class="category_title">
-		{{category.title}}
+	  {{category.title}}
 	</div>
 	<div class="category_posts">
 		{% for post in category.posts.all %}
 			<div class="post">
+			  <div class="post_date">
+			    {{ post.post_date }}
+			  </div>
 				<div class="post_title">
 					{{ post.title }}
 				</div>

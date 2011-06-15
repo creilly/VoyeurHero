@@ -11,7 +11,7 @@ class VHPost(models.Model):
 	title = models.CharField(max_length = 200)
 
 	def __unicode__(self):
-		return '%s: Categories - %s' % (self.title, str(self.categories.all()))
+		return '%s: Categories - %s' % (self.title, ','.join(cat.title for cat in self.categories.all()))
 	
 	class PictureUploadForm(forms.Form):
 		image = forms.ImageField()
