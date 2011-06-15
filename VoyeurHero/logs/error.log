@@ -6,3 +6,13 @@
 [Wed Jun 15 11:25:30 2011] [error] [client 128.32.186.5] Symbolic link not allowed or link target not accessible: /home/jack/VoyeurHero/static/images/jet.jpg, referer: http://voyeurhero.jetphillips.info/
 [Wed Jun 15 11:25:39 2011] [error] [client 128.32.186.5] Symbolic link not allowed or link target not accessible: /home/jack/VoyeurHero/static/css/style.css, referer: http://voyeurhero.jetphillips.info/
 [Wed Jun 15 11:28:19 2011] [error] [client 128.32.186.5] File does not exist: /home/jack/VoyeurHero/static/images/bg.png, referer: http://voyeurhero.jetphillips.info/
+[Wed Jun 15 11:32:10 2011] [error] [client 128.32.186.5] File does not exist: /home/jack/VoyeurHero/static/images/bg.png, referer: http://voyeurhero.jetphillips.info/
+[Wed Jun 15 11:33:01 2011] [error] [client 128.32.186.5] File does not exist: /home/jack/VoyeurHero/static/images/bg.png, referer: http://voyeurhero.jetphillips.info/
+[Wed Jun 15 11:34:18 2011] [error] [client 128.32.186.5] File does not exist: /home/jack/VoyeurHero/static/images/bg.png, referer: http://voyeurhero.jetphillips.info/
+[Wed Jun 15 11:40:04 2011] [error] [client 128.32.186.5] File does not exist: /home/jack/VoyeurHero/static/images/bg.png, referer: http://voyeurhero.jetphillips.info/
+[Wed Jun 15 11:46:06 2011] [error] [client 128.32.186.5] File does not exist: /home/jack/VoyeurHero/static/images/bg.png, referer: http://voyeurhero.jetphillips.info/
+[Wed Jun 15 11:47:22 2011] [error] [client 128.32.186.5] File does not exist: /home/jack/VoyeurHero/static/images/bg.png, referer: http://voyeurhero.jetphillips.info/
+[Wed Jun 15 11:47:54 2011] [error] [client 128.32.186.5] File does not exist: /home/jack/VoyeurHero/static/public/media/pic, referer: http://voyeurhero.jetphillips.info/
+[Wed Jun 15 11:47:54 2011] [error] [client 128.32.186.5] File does not exist: /home/jack/VoyeurHero/static/images/bg.png, referer: http://voyeurhero.jetphillips.info/
+[Wed Jun 15 11:50:38 2011] [error] [client 128.32.186.5] File does not exist: /home/jack/VoyeurHero/static/public/media/pic, referer: http://voyeurhero.jetphillips.info/
+[Wed Jun 15 11:50:38 2011] [error] [client 128.32.186.5] File does not exist: /home/jack/VoyeurHero/static/images/bg.png, referer: http://voyeurhero.jetphillips.info/

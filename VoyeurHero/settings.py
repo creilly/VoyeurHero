@@ -17,8 +17,7 @@ ROOT_PATH = os.path.dirname(__file__)
 def absPath(rel):
     return os.path.join(ROOT_PATH, rel)
 DAJAXICE_MEDIA_PREFIX="dajaxice"
-MEDIA_ROOT = absPath('/public/media')
-MEDIA_URL = '/public/media/'
+
 TEMPLATE_DIRS = (
                  absPath('templates/'),
     # Put strings here, like "/home/html/django_templates" or "C:/www/django/templates".                                                                                           

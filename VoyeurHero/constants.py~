@@ -1,4 +1,7 @@
+MEDIA_ROOT = '/home/jack/VoyeurHero/public/media'
+MEDIA_URL = '/public/media/'
 STATIC_URL = '/vh/static/'
+STATIC_ROOT = '/home/jack/VoyeurHero/static'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql', # Add 'postgresql_psycopg2', 'postgresql', 'mysql', 'sqlite3' or 'oracle'.
