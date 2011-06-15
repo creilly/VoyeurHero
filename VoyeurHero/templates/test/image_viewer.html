@@ -1,0 +1,14 @@
+<html>
+	<head>
+		<title>
+			Pic View
+		</title>
+	</head>
+	<body>
+		<h1>Select an Image to View</h1>
+		<form enctype="multipart/form-data" method="post" action="/backend/picview">{% csrf_token %}
+    		{{form.as_p}}
+    		<input type="submit" value="View" />
+		</form>
+	</body>
+</html>

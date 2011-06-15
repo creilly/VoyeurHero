@@ -1,0 +1,22 @@
+{% for category in categories %}
+<div class="category">
+	<div class="category_title">
+		{{category.title}}
+	</div>
+	<div class="category_posts">
+		{% for post in category.posts.all %}
+			<div class="post">
+				<div class="post_title">
+					{{ post.title }}
+				</div>
+				<figure class="post_figure">
+					<img src="{{post.picture}}" />
+					<figcaption class="post_caption">
+						{{ post.caption }}
+					</figcaption>
+				</figure>
+			</div>
+		{% endfor %}
+	</div>
+</div>
+{% endfor %}

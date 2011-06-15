@@ -1,0 +1,62 @@
+
+<!DOCTYPE html> 
+<html lang="es"> 
+	<head>
+		<title>
+			Voyeur Hero
+		</title>
+		<meta charset="utf-8" /> 
+		{% block libraries %}
+		{% include "backend/libraries.html" %}
+		{% endblock libraries %}
+		
+		{% block links %}
+		{% include "backend/links.html" %}
+		{% endblock links %}
+		
+	</head>
+	<body id="index" class="home"> 
+	<header id="banner" class="body">
+		<h1><a href="#">Voyeur Hero! <br /><strong>Look, You're Famous</strong></a></h1>
+		<nav>
+			<ul> 
+				<li class="active"><a href="#">home</a></li> 
+				<li><a href="#">portfolio</a></li>
+				<li><a href="#">blog</a></li> 
+				<li><a href="#">contact</a></li> 
+			</ul>
+		</nav> 
+	</header><!-- /#banner --> 
+	
+	<aside id="featured" class="body">
+		<article> 
+		<hgroup> 
+			<h2>Voyeur Hero</h2> 
+			<h3><a href="#">The new site where it's alright to spy</a></h3> 
+		</hgroup> 
+		<p>Discover what a true lack of privacy feels like!</p> 
+	</article>
+	</aside><!-- /#featured --> 
+	<section id="content" class="body"> 
+			{% block content %}
+			No Content
+			{% endblock content %}
+	</section>
+	
+	<footer id="contentinfo" class="body"> 
+		<address id="about" class="vcard body"> 
+			<span class="primary"> 
+				<strong><a href="#" class="fn url">Voyeur Hero</a></strong> 
+				<span class="role">Jet Phillips</span> 
+			</span><!-- /.primary --> 
+		
+			<img src="/static/images/jet.jpg" alt="Jet Phillips Logo" class="photo" /> 
+		
+			<span class="bio">Voyeur Hero globalizes your happenstances</span> 
+		
+		</address><!-- /#about --> 
+		
+		<p>2011 <a href="http://jetphillips.info">Jet Phillps Inception</a>.</p> 
+	</footer><!-- /#contentinfo --> 
+	</body>
+</html>
