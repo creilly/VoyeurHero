@@ -937,3 +937,4 @@
 128.32.186.5 - - [15/Jun/2011:12:44:02 -0700] "GET /admin/jsi18n/ HTTP/1.1" 200 2350 "http://voyeurhero.jetphillips.info/admin/backend/vhcategory/4/" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_6_7) AppleWebKit/535.1 (KHTML, like Gecko) Chrome/13.0.782.20 Safari/535.1"
 128.32.186.5 - - [15/Jun/2011:12:44:02 -0700] "GET /favicon.ico HTTP/1.1" 404 1296 "-" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_6_7) AppleWebKit/535.1 (KHTML, like Gecko) Chrome/13.0.782.20 Safari/535.1"
 128.32.186.5 - - [15/Jun/2011:12:44:19 -0700] "GET /favicon.ico HTTP/1.1" 404 1296 "-" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_6_7) AppleWebKit/535.1 (KHTML, like Gecko) Chrome/13.0.782.20 Safari/535.1"
+123.125.71.14 - - [15/Jun/2011:12:46:45 -0700] "GET / HTTP/1.1" 200 1807 "-" "Mozilla/5.0 (compatible; Baiduspider/2.0; +http://www.baidu.com/search/spider.html)"
