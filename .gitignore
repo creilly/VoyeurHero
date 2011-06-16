@@ -1,1 +1,5 @@
 VoyeurHero/constants.py
+*.pyc
+*/*.pyc
+*.py~
+*/*.py~
