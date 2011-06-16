@@ -1,0 +1,5 @@
+h1 {
+    left-margin: auto;
+    right-margin: auto;
+    font-family: courier;
+}

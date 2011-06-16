@@ -1,14 +1,21 @@
 # Create your views here.
 from ImageOps import flip
+from django import forms
 from django.http import HttpResponse
 from django.shortcuts import render_to_response
 from django.template.context import Context
+from django.utils.simplejson import dumps
+from haystack.query import SearchQuerySet
 from models import VHCategory
-from django import forms
 
 def index(request):
     return render_to_response('backend/index.html',dict(categories=VHCategory.objects.order_by('title').all()))
 
+def search(request):
+    return render_to_response('backend/search.html',dict())
+
+def autocomplete(request):
+    return HttpResponse(dumps([result.object.title for result in SearchQuerySet().autocomplete(content_auto=request.GET['term'])]))
 
 
 class ImageViewerForm(forms.Form):
