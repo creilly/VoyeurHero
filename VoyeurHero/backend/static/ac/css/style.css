@@ -1,0 +1,26 @@
+body {
+    border-radius: 40px;
+    box-shadow: 20px 20px 20px #000;
+    text-shadow: 2px 2px 2px #000;
+    font-family: courier;
+    background-color: #ddd;
+    border: 2px solid #000;
+    margin: 40px;
+    padding: 5px;
+}
+
+
+header {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+
+h1 {
+    text-shadow: 2px 2px 2px #888;
+    font-size: 50pt;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+}
