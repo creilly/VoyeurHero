@@ -75,3 +75,8 @@
 [Wed Jun 15 16:49:01 2011] [error] [client 128.32.186.5] File does not exist: /home/jack/VoyeurHero/static/images/bg.png, referer: http://voyeurhero.jetphillips.info/
 [Wed Jun 15 16:50:49 2011] [error] [client 76.103.90.114] File does not exist: /home/jack/VoyeurHero/static/images/bg.png, referer: http://voyeurhero.jetphillips.info/
 [Wed Jun 15 21:49:40 2011] [error] [client 67.169.98.139] File does not exist: /home/jack/VoyeurHero/static/images/bg.png, referer: http://voyeurhero.jetphillips.info/
+[Thu Jun 16 02:57:55 2011] [error] [client 67.169.98.139] File does not exist: /home/jack/VoyeurHero/static/ac, referer: http://voyeurhero.jetphillips.info/
+[Thu Jun 16 02:57:56 2011] [error] [client 67.169.98.139] File does not exist: /home/jack/VoyeurHero/static/ac, referer: http://voyeurhero.jetphillips.info/
+[Thu Jun 16 02:57:57 2011] [error] [client 67.169.98.139] File does not exist: /home/jack/VoyeurHero/static/images/bg.png, referer: http://voyeurhero.jetphillips.info/
+[Thu Jun 16 02:58:03 2011] [error] [client 67.169.98.139] File does not exist: /home/jack/VoyeurHero/static/ac, referer: http://voyeurhero.jetphillips.info/backend/search
+[Thu Jun 16 02:58:03 2011] [error] [client 67.169.98.139] File does not exist: /home/jack/VoyeurHero/static/images/bg.png, referer: http://voyeurhero.jetphillips.info/backend/search
