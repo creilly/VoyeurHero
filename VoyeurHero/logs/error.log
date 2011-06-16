@@ -80,3 +80,115 @@
 [Thu Jun 16 02:57:57 2011] [error] [client 67.169.98.139] File does not exist: /home/jack/VoyeurHero/static/images/bg.png, referer: http://voyeurhero.jetphillips.info/
 [Thu Jun 16 02:58:03 2011] [error] [client 67.169.98.139] File does not exist: /home/jack/VoyeurHero/static/ac, referer: http://voyeurhero.jetphillips.info/backend/search
 [Thu Jun 16 02:58:03 2011] [error] [client 67.169.98.139] File does not exist: /home/jack/VoyeurHero/static/images/bg.png, referer: http://voyeurhero.jetphillips.info/backend/search
+[Thu Jun 16 14:43:01 2011] [error] [client 127.0.0.1] mod_wsgi (pid=6503): Exception occurred processing WSGI script '/home/jack/VoyeurHero/VoyeurHero/apache/django.wsgi'., referer: http://jetphillips.info/
+[Thu Jun 16 14:43:01 2011] [error] [client 127.0.0.1] Traceback (most recent call last):, referer: http://jetphillips.info/
+[Thu Jun 16 14:43:01 2011] [error] [client 127.0.0.1]   File "/usr/local/lib/python2.6/dist-packages/django/core/handlers/wsgi.py", line 250, in __call__, referer: http://jetphillips.info/
+[Thu Jun 16 14:43:01 2011] [error] [client 127.0.0.1]     self.load_middleware(), referer: http://jetphillips.info/
+[Thu Jun 16 14:43:01 2011] [error] [client 127.0.0.1]   File "/usr/local/lib/python2.6/dist-packages/django/core/handlers/base.py", line 51, in load_middleware, referer: http://jetphillips.info/
+[Thu Jun 16 14:43:01 2011] [error] [client 127.0.0.1]     raise exceptions.ImproperlyConfigured('Middleware module "%s" does not define a "%s" class' % (mw_module, mw_classname)), referer: http://jetphillips.info/
+[Thu Jun 16 14:43:01 2011] [error] [client 127.0.0.1] ImproperlyConfigured: Middleware module "django.middleware.http" does not define a "SetRemoteAddrFromForwardedFor" class, referer: http://jetphillips.info/
+[Thu Jun 16 14:43:02 2011] [error] [client 127.0.0.1] mod_wsgi (pid=6451): Exception occurred processing WSGI script '/home/jack/VoyeurHero/VoyeurHero/apache/django.wsgi'.
+[Thu Jun 16 14:43:02 2011] [error] [client 127.0.0.1] Traceback (most recent call last):
+[Thu Jun 16 14:43:02 2011] [error] [client 127.0.0.1]   File "/usr/local/lib/python2.6/dist-packages/django/core/handlers/wsgi.py", line 250, in __call__
+[Thu Jun 16 14:43:02 2011] [error] [client 127.0.0.1]     self.load_middleware()
+[Thu Jun 16 14:43:02 2011] [error] [client 127.0.0.1]   File "/usr/local/lib/python2.6/dist-packages/django/core/handlers/base.py", line 51, in load_middleware
+[Thu Jun 16 14:43:02 2011] [error] [client 127.0.0.1]     raise exceptions.ImproperlyConfigured('Middleware module "%s" does not define a "%s" class' % (mw_module, mw_classname))
+[Thu Jun 16 14:43:02 2011] [error] [client 127.0.0.1] ImproperlyConfigured: Middleware module "django.middleware.http" does not define a "SetRemoteAddrFromForwardedFor" class
+[Thu Jun 16 14:43:07 2011] [error] [client 127.0.0.1] mod_wsgi (pid=6501): Exception occurred processing WSGI script '/home/jack/VoyeurHero/VoyeurHero/apache/django.wsgi'.
+[Thu Jun 16 14:43:07 2011] [error] [client 127.0.0.1] Traceback (most recent call last):
+[Thu Jun 16 14:43:07 2011] [error] [client 127.0.0.1]   File "/usr/local/lib/python2.6/dist-packages/django/core/handlers/wsgi.py", line 250, in __call__
+[Thu Jun 16 14:43:07 2011] [error] [client 127.0.0.1]     self.load_middleware()
+[Thu Jun 16 14:43:07 2011] [error] [client 127.0.0.1]   File "/usr/local/lib/python2.6/dist-packages/django/core/handlers/base.py", line 51, in load_middleware
+[Thu Jun 16 14:43:07 2011] [error] [client 127.0.0.1]     raise exceptions.ImproperlyConfigured('Middleware module "%s" does not define a "%s" class' % (mw_module, mw_classname))
+[Thu Jun 16 14:43:07 2011] [error] [client 127.0.0.1] ImproperlyConfigured: Middleware module "django.middleware.http" does not define a "SetRemoteAddrFromForwardedFor" class
+[Thu Jun 16 14:43:08 2011] [error] [client 127.0.0.1] mod_wsgi (pid=6447): Exception occurred processing WSGI script '/home/jack/VoyeurHero/VoyeurHero/apache/django.wsgi'.
+[Thu Jun 16 14:43:08 2011] [error] [client 127.0.0.1] Traceback (most recent call last):
+[Thu Jun 16 14:43:08 2011] [error] [client 127.0.0.1]   File "/usr/local/lib/python2.6/dist-packages/django/core/handlers/wsgi.py", line 250, in __call__
+[Thu Jun 16 14:43:08 2011] [error] [client 127.0.0.1]     self.load_middleware()
+[Thu Jun 16 14:43:08 2011] [error] [client 127.0.0.1]   File "/usr/local/lib/python2.6/dist-packages/django/core/handlers/base.py", line 51, in load_middleware
+[Thu Jun 16 14:43:08 2011] [error] [client 127.0.0.1]     raise exceptions.ImproperlyConfigured('Middleware module "%s" does not define a "%s" class' % (mw_module, mw_classname))
+[Thu Jun 16 14:43:08 2011] [error] [client 127.0.0.1] ImproperlyConfigured: Middleware module "django.middleware.http" does not define a "SetRemoteAddrFromForwardedFor" class
+[Thu Jun 16 14:43:20 2011] [error] [client 67.169.98.139] mod_wsgi (pid=6448): Exception occurred processing WSGI script '/home/jack/VoyeurHero/VoyeurHero/apache/django.wsgi'.
+[Thu Jun 16 14:43:20 2011] [error] [client 67.169.98.139] Traceback (most recent call last):
+[Thu Jun 16 14:43:20 2011] [error] [client 67.169.98.139]   File "/usr/local/lib/python2.6/dist-packages/django/core/handlers/wsgi.py", line 250, in __call__
+[Thu Jun 16 14:43:20 2011] [error] [client 67.169.98.139]     self.load_middleware()
+[Thu Jun 16 14:43:20 2011] [error] [client 67.169.98.139]   File "/usr/local/lib/python2.6/dist-packages/django/core/handlers/base.py", line 51, in load_middleware
+[Thu Jun 16 14:43:20 2011] [error] [client 67.169.98.139]     raise exceptions.ImproperlyConfigured('Middleware module "%s" does not define a "%s" class' % (mw_module, mw_classname))
+[Thu Jun 16 14:43:20 2011] [error] [client 67.169.98.139] ImproperlyConfigured: Middleware module "django.middleware.http" does not define a "SetRemoteAddrFromForwardedFor" class
+[Thu Jun 16 14:43:20 2011] [error] [client 67.169.98.139] mod_wsgi (pid=6502): Exception occurred processing WSGI script '/home/jack/VoyeurHero/VoyeurHero/apache/django.wsgi'.
+[Thu Jun 16 14:43:20 2011] [error] [client 67.169.98.139] Traceback (most recent call last):
+[Thu Jun 16 14:43:20 2011] [error] [client 67.169.98.139]   File "/usr/local/lib/python2.6/dist-packages/django/core/handlers/wsgi.py", line 250, in __call__
+[Thu Jun 16 14:43:20 2011] [error] [client 67.169.98.139]     self.load_middleware()
+[Thu Jun 16 14:43:20 2011] [error] [client 67.169.98.139]   File "/usr/local/lib/python2.6/dist-packages/django/core/handlers/base.py", line 51, in load_middleware
+[Thu Jun 16 14:43:20 2011] [error] [client 67.169.98.139]     raise exceptions.ImproperlyConfigured('Middleware module "%s" does not define a "%s" class' % (mw_module, mw_classname))
+[Thu Jun 16 14:43:20 2011] [error] [client 67.169.98.139] ImproperlyConfigured: Middleware module "django.middleware.http" does not define a "SetRemoteAddrFromForwardedFor" class
+[Thu Jun 16 14:44:31 2011] [error] [client 67.169.98.139] mod_wsgi (pid=6449): Exception occurred processing WSGI script '/home/jack/VoyeurHero/VoyeurHero/apache/django.wsgi'.
+[Thu Jun 16 14:44:31 2011] [error] [client 67.169.98.139] Traceback (most recent call last):
+[Thu Jun 16 14:44:31 2011] [error] [client 67.169.98.139]   File "/usr/local/lib/python2.6/dist-packages/django/core/handlers/wsgi.py", line 250, in __call__
+[Thu Jun 16 14:44:31 2011] [error] [client 67.169.98.139]     self.load_middleware()
+[Thu Jun 16 14:44:31 2011] [error] [client 67.169.98.139]   File "/usr/local/lib/python2.6/dist-packages/django/core/handlers/base.py", line 51, in load_middleware
+[Thu Jun 16 14:44:31 2011] [error] [client 67.169.98.139]     raise exceptions.ImproperlyConfigured('Middleware module "%s" does not define a "%s" class' % (mw_module, mw_classname))
+[Thu Jun 16 14:44:31 2011] [error] [client 67.169.98.139] ImproperlyConfigured: Middleware module "django.middleware.http" does not define a "SetRemoteAddrFromForwardedFor" class
+[Thu Jun 16 14:44:31 2011] [error] [client 67.169.98.139] mod_wsgi (pid=6450): Exception occurred processing WSGI script '/home/jack/VoyeurHero/VoyeurHero/apache/django.wsgi'.
+[Thu Jun 16 14:44:31 2011] [error] [client 67.169.98.139] Traceback (most recent call last):
+[Thu Jun 16 14:44:31 2011] [error] [client 67.169.98.139]   File "/usr/local/lib/python2.6/dist-packages/django/core/handlers/wsgi.py", line 250, in __call__
+[Thu Jun 16 14:44:31 2011] [error] [client 67.169.98.139]     self.load_middleware()
+[Thu Jun 16 14:44:31 2011] [error] [client 67.169.98.139]   File "/usr/local/lib/python2.6/dist-packages/django/core/handlers/base.py", line 51, in load_middleware
+[Thu Jun 16 14:44:31 2011] [error] [client 67.169.98.139]     raise exceptions.ImproperlyConfigured('Middleware module "%s" does not define a "%s" class' % (mw_module, mw_classname))
+[Thu Jun 16 14:44:31 2011] [error] [client 67.169.98.139] ImproperlyConfigured: Middleware module "django.middleware.http" does not define a "SetRemoteAddrFromForwardedFor" class
+[Thu Jun 16 14:44:42 2011] [error] [client 127.0.0.1] mod_wsgi (pid=6503): Exception occurred processing WSGI script '/home/jack/VoyeurHero/VoyeurHero/apache/django.wsgi'.
+[Thu Jun 16 14:44:42 2011] [error] [client 127.0.0.1] Traceback (most recent call last):
+[Thu Jun 16 14:44:42 2011] [error] [client 127.0.0.1]   File "/usr/local/lib/python2.6/dist-packages/django/core/handlers/wsgi.py", line 250, in __call__
+[Thu Jun 16 14:44:42 2011] [error] [client 127.0.0.1]     self.load_middleware()
+[Thu Jun 16 14:44:42 2011] [error] [client 127.0.0.1]   File "/usr/local/lib/python2.6/dist-packages/django/core/handlers/base.py", line 51, in load_middleware
+[Thu Jun 16 14:44:42 2011] [error] [client 127.0.0.1]     raise exceptions.ImproperlyConfigured('Middleware module "%s" does not define a "%s" class' % (mw_module, mw_classname))
+[Thu Jun 16 14:44:42 2011] [error] [client 127.0.0.1] ImproperlyConfigured: Middleware module "django.middleware.http" does not define a "SetRemoteAddrFromForwardedFor" class
+[Thu Jun 16 14:44:42 2011] [error] [client 127.0.0.1] mod_wsgi (pid=6451): Exception occurred processing WSGI script '/home/jack/VoyeurHero/VoyeurHero/apache/django.wsgi'.
+[Thu Jun 16 14:44:42 2011] [error] [client 127.0.0.1] Traceback (most recent call last):
+[Thu Jun 16 14:44:42 2011] [error] [client 127.0.0.1]   File "/usr/local/lib/python2.6/dist-packages/django/core/handlers/wsgi.py", line 250, in __call__
+[Thu Jun 16 14:44:42 2011] [error] [client 127.0.0.1]     self.load_middleware()
+[Thu Jun 16 14:44:42 2011] [error] [client 127.0.0.1]   File "/usr/local/lib/python2.6/dist-packages/django/core/handlers/base.py", line 51, in load_middleware
+[Thu Jun 16 14:44:42 2011] [error] [client 127.0.0.1]     raise exceptions.ImproperlyConfigured('Middleware module "%s" does not define a "%s" class' % (mw_module, mw_classname))
+[Thu Jun 16 14:44:42 2011] [error] [client 127.0.0.1] ImproperlyConfigured: Middleware module "django.middleware.http" does not define a "SetRemoteAddrFromForwardedFor" class
+[Thu Jun 16 14:44:44 2011] [error] [client 127.0.0.1] mod_wsgi (pid=6501): Exception occurred processing WSGI script '/home/jack/VoyeurHero/VoyeurHero/apache/django.wsgi'.
+[Thu Jun 16 14:44:44 2011] [error] [client 127.0.0.1] Traceback (most recent call last):
+[Thu Jun 16 14:44:44 2011] [error] [client 127.0.0.1]   File "/usr/local/lib/python2.6/dist-packages/django/core/handlers/wsgi.py", line 250, in __call__
+[Thu Jun 16 14:44:44 2011] [error] [client 127.0.0.1]     self.load_middleware()
+[Thu Jun 16 14:44:44 2011] [error] [client 127.0.0.1]   File "/usr/local/lib/python2.6/dist-packages/django/core/handlers/base.py", line 51, in load_middleware
+[Thu Jun 16 14:44:44 2011] [error] [client 127.0.0.1]     raise exceptions.ImproperlyConfigured('Middleware module "%s" does not define a "%s" class' % (mw_module, mw_classname))
+[Thu Jun 16 14:44:44 2011] [error] [client 127.0.0.1] ImproperlyConfigured: Middleware module "django.middleware.http" does not define a "SetRemoteAddrFromForwardedFor" class
+[Thu Jun 16 14:44:44 2011] [error] [client 127.0.0.1] mod_wsgi (pid=6447): Exception occurred processing WSGI script '/home/jack/VoyeurHero/VoyeurHero/apache/django.wsgi'.
+[Thu Jun 16 14:44:44 2011] [error] [client 127.0.0.1] Traceback (most recent call last):
+[Thu Jun 16 14:44:44 2011] [error] [client 127.0.0.1]   File "/usr/local/lib/python2.6/dist-packages/django/core/handlers/wsgi.py", line 250, in __call__
+[Thu Jun 16 14:44:44 2011] [error] [client 127.0.0.1]     self.load_middleware()
+[Thu Jun 16 14:44:44 2011] [error] [client 127.0.0.1]   File "/usr/local/lib/python2.6/dist-packages/django/core/handlers/base.py", line 51, in load_middleware
+[Thu Jun 16 14:44:44 2011] [error] [client 127.0.0.1]     raise exceptions.ImproperlyConfigured('Middleware module "%s" does not define a "%s" class' % (mw_module, mw_classname))
+[Thu Jun 16 14:44:44 2011] [error] [client 127.0.0.1] ImproperlyConfigured: Middleware module "django.middleware.http" does not define a "SetRemoteAddrFromForwardedFor" class
+[Thu Jun 16 14:44:45 2011] [error] [client 127.0.0.1] mod_wsgi (pid=6448): Exception occurred processing WSGI script '/home/jack/VoyeurHero/VoyeurHero/apache/django.wsgi'.
+[Thu Jun 16 14:44:45 2011] [error] [client 127.0.0.1] Traceback (most recent call last):
+[Thu Jun 16 14:44:45 2011] [error] [client 127.0.0.1]   File "/usr/local/lib/python2.6/dist-packages/django/core/handlers/wsgi.py", line 250, in __call__
+[Thu Jun 16 14:44:45 2011] [error] [client 127.0.0.1]     self.load_middleware()
+[Thu Jun 16 14:44:45 2011] [error] [client 127.0.0.1]   File "/usr/local/lib/python2.6/dist-packages/django/core/handlers/base.py", line 51, in load_middleware
+[Thu Jun 16 14:44:45 2011] [error] [client 127.0.0.1]     raise exceptions.ImproperlyConfigured('Middleware module "%s" does not define a "%s" class' % (mw_module, mw_classname))
+[Thu Jun 16 14:44:45 2011] [error] [client 127.0.0.1] ImproperlyConfigured: Middleware module "django.middleware.http" does not define a "SetRemoteAddrFromForwardedFor" class
+[Thu Jun 16 14:44:46 2011] [error] [client 127.0.0.1] mod_wsgi (pid=6502): Exception occurred processing WSGI script '/home/jack/VoyeurHero/VoyeurHero/apache/django.wsgi'.
+[Thu Jun 16 14:44:46 2011] [error] [client 127.0.0.1] Traceback (most recent call last):
+[Thu Jun 16 14:44:46 2011] [error] [client 127.0.0.1]   File "/usr/local/lib/python2.6/dist-packages/django/core/handlers/wsgi.py", line 250, in __call__
+[Thu Jun 16 14:44:46 2011] [error] [client 127.0.0.1]     self.load_middleware()
+[Thu Jun 16 14:44:46 2011] [error] [client 127.0.0.1]   File "/usr/local/lib/python2.6/dist-packages/django/core/handlers/base.py", line 51, in load_middleware
+[Thu Jun 16 14:44:46 2011] [error] [client 127.0.0.1]     raise exceptions.ImproperlyConfigured('Middleware module "%s" does not define a "%s" class' % (mw_module, mw_classname))
+[Thu Jun 16 14:44:46 2011] [error] [client 127.0.0.1] ImproperlyConfigured: Middleware module "django.middleware.http" does not define a "SetRemoteAddrFromForwardedFor" class
+[Thu Jun 16 14:45:21 2011] [error] [client 127.0.0.1] mod_wsgi (pid=6449): Exception occurred processing WSGI script '/home/jack/VoyeurHero/VoyeurHero/apache/django.wsgi'.
+[Thu Jun 16 14:45:21 2011] [error] [client 127.0.0.1] Traceback (most recent call last):
+[Thu Jun 16 14:45:21 2011] [error] [client 127.0.0.1]   File "/usr/local/lib/python2.6/dist-packages/django/core/handlers/wsgi.py", line 250, in __call__
+[Thu Jun 16 14:45:21 2011] [error] [client 127.0.0.1]     self.load_middleware()
+[Thu Jun 16 14:45:21 2011] [error] [client 127.0.0.1]   File "/usr/local/lib/python2.6/dist-packages/django/core/handlers/base.py", line 51, in load_middleware
+[Thu Jun 16 14:45:21 2011] [error] [client 127.0.0.1]     raise exceptions.ImproperlyConfigured('Middleware module "%s" does not define a "%s" class' % (mw_module, mw_classname))
+[Thu Jun 16 14:45:21 2011] [error] [client 127.0.0.1] ImproperlyConfigured: Middleware module "django.middleware.http" does not define a "SetRemoteAddrFromForwardedFor" class
+[Thu Jun 16 14:45:22 2011] [error] [client 127.0.0.1] mod_wsgi (pid=6450): Exception occurred processing WSGI script '/home/jack/VoyeurHero/VoyeurHero/apache/django.wsgi'.
+[Thu Jun 16 14:45:22 2011] [error] [client 127.0.0.1] Traceback (most recent call last):
+[Thu Jun 16 14:45:22 2011] [error] [client 127.0.0.1]   File "/usr/local/lib/python2.6/dist-packages/django/core/handlers/wsgi.py", line 250, in __call__
+[Thu Jun 16 14:45:22 2011] [error] [client 127.0.0.1]     self.load_middleware()
+[Thu Jun 16 14:45:22 2011] [error] [client 127.0.0.1]   File "/usr/local/lib/python2.6/dist-packages/django/core/handlers/base.py", line 51, in load_middleware
+[Thu Jun 16 14:45:22 2011] [error] [client 127.0.0.1]     raise exceptions.ImproperlyConfigured('Middleware module "%s" does not define a "%s" class' % (mw_module, mw_classname))
+[Thu Jun 16 14:45:22 2011] [error] [client 127.0.0.1] ImproperlyConfigured: Middleware module "django.middleware.http" does not define a "SetRemoteAddrFromForwardedFor" class
