@@ -1,3 +1,3 @@
 #!/bin/bash
 
-python ../manage.py dumpdata backend > ../fixtures/users.json
+python ../manage.py dumpdata auth > ../fixtures/users.json

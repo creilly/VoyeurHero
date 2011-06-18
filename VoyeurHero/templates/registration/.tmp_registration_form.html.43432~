@@ -1,7 +1,0 @@
-{% extends "backend/base.html" %}
-
-{% block content %}
-
-{{ form }}
-
-{% endblock content %}
