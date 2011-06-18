@@ -192,3 +192,11 @@
 [Thu Jun 16 14:45:22 2011] [error] [client 127.0.0.1]   File "/usr/local/lib/python2.6/dist-packages/django/core/handlers/base.py", line 51, in load_middleware
 [Thu Jun 16 14:45:22 2011] [error] [client 127.0.0.1]     raise exceptions.ImproperlyConfigured('Middleware module "%s" does not define a "%s" class' % (mw_module, mw_classname))
 [Thu Jun 16 14:45:22 2011] [error] [client 127.0.0.1] ImproperlyConfigured: Middleware module "django.middleware.http" does not define a "SetRemoteAddrFromForwardedFor" class
+[Fri Jun 17 18:48:46 2011] [error] [client 127.0.0.1] mod_wsgi (pid=25838): Exception occurred processing WSGI script '/home/jack/VoyeurHero/VoyeurHero/apache/django.wsgi'., referer: http://voyeurhero.jetphillips.info/
+[Fri Jun 17 18:48:46 2011] [error] [client 127.0.0.1] IOError: failed to write data, referer: http://voyeurhero.jetphillips.info/
+[Fri Jun 17 18:50:47 2011] [error] [client 127.0.0.1] mod_wsgi (pid=25839): Exception occurred processing WSGI script '/home/jack/VoyeurHero/VoyeurHero/apache/django.wsgi'.
+[Fri Jun 17 18:50:47 2011] [error] [client 127.0.0.1] IOError: failed to write data
+[Fri Jun 17 18:51:16 2011] [error] [client 127.0.0.1] mod_wsgi (pid=25838): Exception occurred processing WSGI script '/home/jack/VoyeurHero/VoyeurHero/apache/django.wsgi'.
+[Fri Jun 17 18:51:16 2011] [error] [client 127.0.0.1] IOError: failed to write data
+[Fri Jun 17 18:51:26 2011] [error] [client 127.0.0.1] mod_wsgi (pid=26004): Exception occurred processing WSGI script '/home/jack/VoyeurHero/VoyeurHero/apache/django.wsgi'.
+[Fri Jun 17 18:51:26 2011] [error] [client 127.0.0.1] IOError: failed to write data

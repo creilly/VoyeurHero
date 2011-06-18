@@ -4,7 +4,7 @@ from django.db import models
 # Create your models here.
 
 class VHPost(models.Model):
-	picture = models.ImageField(upload_to='post_images',verbose_name = 'Post Picture', null = True,blank = True,default='http://mormonsoprano.files.wordpress.com/2010/01/mystery-man.jpg')
+	picture = models.ImageField(upload_to='post_images',verbose_name = 'Post Picture', null = True,blank = True,default='post_images/mystery-man.jpg')
 	caption = models.CharField(max_length=10000, verbose_name = 'Caption for Picture')
 	post_date = models.DateTimeField(auto_now_add=True,verbose_name = 'Posted Date')
 	categories = models.ManyToManyField('VHCategory',verbose_name = 'Categories for Post',null = True, blank = True)

@@ -9,7 +9,7 @@ from haystack.query import SearchQuerySet
 from models import VHCategory
 
 def index(request):
-    return render_to_response('backend/index.html',dict(categories=VHCategory.objects.order_by('title').all()))
+    return render_to_response('backend/index.html',dict(categories=VHCategory.objects.order_by('title')[:30]))
 
 def search(request):
     return render_to_response('backend/search.html',dict())
@@ -18,7 +18,7 @@ def contact(request):
     return render_to_response('backend/contact.html',dict())
 
 def autocomplete(request):
-    return HttpResponse(dumps([result.object.title for result in SearchQuerySet().autocomplete(content_auto=request.GET['term'])]))
+    return HttpResponse(dumps([result.object.title for result in SearchQuerySet().autocomplete(post_auto=request.GET['term'])]))
 
 
 class ImageViewerForm(forms.Form):
