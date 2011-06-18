@@ -1,5 +1,7 @@
 {% extends "backend/base.html" %}
 
 {% block content %}
-Eat Shit
-{% endblock content %}ç
+
+{{ form }}
+
+{% endblock content %}

@@ -1,0 +1,15 @@
+{% extends "backend/base.html" %}
+
+{% block content %}
+
+<form action="" method="POST">
+
+{% csrf_token %}
+
+{{ form }}
+
+<input type="submit" value="Continue" name="Continue" />
+
+</form>
+
+{% endblock content %}

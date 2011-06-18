@@ -59,7 +59,7 @@ USE_L10N = True
 # URL prefix for admin static files -- CSS, JavaScript and images.
 # Make sure to use a trailing slash.
 # Examples: "http://foo.com/static/admin/", "/static/admin/".
-ADMIN_MEDIA_PREFIX = '/static/admin/'
+ADMIN_MEDIA_PREFIX = '/vh/static/admin/'
 
 # Additional locations of static files
 STATICFILES_DIRS = (
@@ -101,15 +101,15 @@ INSTALLED_APPS = (
     'django.contrib.auth',
     'django.contrib.contenttypes',
     'django.contrib.sessions',
-    #'django.contrib.sites',
+    'django.contrib.sites',
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'django.contrib.admin',
     'django.contrib.admindocs',
     'south',
-    'haystack',
     'dajaxice',
     'backend',
+    'registration',
     'haystack',
 )
 
@@ -144,3 +144,4 @@ LOGGING = {
         },
     }
 }
+ACCOUNT_ACTIVATION_DAYS = 7

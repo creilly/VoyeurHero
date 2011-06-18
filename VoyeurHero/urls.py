@@ -6,15 +6,11 @@ admin.autodiscover()
 
 urlpatterns = patterns('',
     # Examples:
+    (r'^accounts/', include('registration.urls')),
     (r'^search/', include('haystack.urls')),
     url(r'^backend/', include('backend.urls')),
     url(r'^$', 'backend.views.index', name='index'),
-    # url(r'^VoyeurHero/', include('VoyeurHero.foo.urls')),
-
-    # Uncomment the admin/doc line below to enable admin documentation:
     url(r'^admin/doc/', include('django.contrib.admindocs.urls')),
-
-    # Uncomment the next line to enable the admin:
     url(r'^admin/', include(admin.site.urls)),
 )
 if settings.DEBUG:

@@ -1,0 +1,11 @@
+Thank you for Registering at VoyeurHero.com!
+
+This is your confirmation email.  Please click the link given in this email to complete the process.
+
+{{site}}/accounts/activate/{{activation_key}}/
+
+You have {{expiration_days}} days to complete your confirmation, otherwise you must register again.
+
+Love,
+
+Jet Phillips
