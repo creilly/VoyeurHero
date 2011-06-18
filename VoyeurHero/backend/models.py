@@ -3,11 +3,17 @@ from django.contrib import admin
 from django.db import models
 # Create your models here.
 
+class VHTag(models.Model):
+	name = models.CharField(max_length=50,verbose_name='Tag Name')
+	def __unicode__(self):
+		return self.name
+
 class VHPost(models.Model):
 	picture = models.ImageField(upload_to='post_images',verbose_name = 'Post Picture', null = True,blank = True,default='post_images/mystery-man.jpg')
 	caption = models.CharField(max_length=10000, verbose_name = 'Caption for Picture')
 	post_date = models.DateTimeField(auto_now_add=True,verbose_name = 'Posted Date')
 	categories = models.ManyToManyField('VHCategory',verbose_name = 'Categories for Post',null = True, blank = True)
+	tags = models.ManyToManyField('VHTag',verbose_name= 'Related Tags',null=True,blank=True)
 	title = models.CharField(max_length = 200)
 
 	def __unicode__(self):
@@ -30,10 +36,12 @@ class VHPost(models.Model):
 	
 class VHCategory(models.Model):
 	title = models.CharField(max_length=200,verbose_name = 'Category Title')
-	posts = models.ManyToManyField(VHPost,verbose_name = 'Posts Tagged With Category', null = True, blank = True)
-	
+	posts = models.ManyToManyField('VHPost',verbose_name = 'Posts Tagged With Category', null = True, blank = True)
+	tags = models.ManyToManyField('VHTag',verbose_name= 'Related Tags',null=True,blank=True)
 	def __unicode__(self):
-		return '%s: %i posts' % (self.title, len(self.posts.all()))
+		return '%s: %i posts, %i tags' % (self.title, len(self.posts.all()), len(self.tags.all()))
 	
+admin.site.register(VHTag)
 admin.site.register(VHPost)
 admin.site.register(VHCategory)
+

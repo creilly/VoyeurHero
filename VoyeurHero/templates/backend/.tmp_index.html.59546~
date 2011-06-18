@@ -1,4 +1,5 @@
 {% extends "backend/base.html" %}
+
 {% block content %}
 {% include "backend/categories.html" %}
 {% endblock content %}

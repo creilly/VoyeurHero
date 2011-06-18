@@ -3,13 +3,21 @@ from ImageOps import flip
 from django import forms
 from django.http import HttpResponse
 from django.shortcuts import render_to_response
-from django.template.context import Context
+from django.template.context import Context, RequestContext
 from django.utils.simplejson import dumps
 from haystack.query import SearchQuerySet
 from models import VHCategory
+from django.views.decorators.csrf import csrf_protect
+from random import choice, sample, randint, shuffle
+
+N_CATEGORIES_PULL = 50
+N_CATEGORIES_SELECT = 10
 
 def index(request):
-    return render_to_response('backend/index.html',dict(categories=VHCategory.objects.order_by('title')[:30]))
+    categories = sample(VHCategory.objects.order_by('title')[:N_CATEGORIES_PULL], N_CATEGORIES_SELECT)
+    shuffle(categories)
+    return render_to_response('backend/index.html',dict(categories=categories), RequestContext(request))
+
 
 def search(request):
     return render_to_response('backend/search.html',dict())
@@ -18,7 +26,7 @@ def contact(request):
     return render_to_response('backend/contact.html',dict())
 
 def autocomplete(request):
-    return HttpResponse(dumps([result.object.title for result in SearchQuerySet().autocomplete(post_auto=request.GET['term'])]))
+    return HttpResponse(dumps([result.object.name for result in SearchQuerySet().autocomplete(tag_auto=request.GET['term'])]))
 
 
 class ImageViewerForm(forms.Form):

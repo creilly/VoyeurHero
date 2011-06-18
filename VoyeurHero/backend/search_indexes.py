@@ -1,6 +1,13 @@
 from haystack import indexes
 from models import *
 
+class VHTagIndex(indexes.SearchIndex):
+    text = indexes.CharField(document=True, use_template=True)
+    tag_auto = indexes.EdgeNgramField(model_attr='name')
+    
+    def get_model(self):
+        return VHTag
+
     
 class VHCategoryIndex(indexes.SearchIndex):
     text = indexes.CharField(document=True, use_template=True)
