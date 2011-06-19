@@ -10,8 +10,8 @@ from models import VHCategory
 from django.views.decorators.csrf import csrf_protect
 from random import choice, sample, randint, shuffle
 
-N_CATEGORIES_PULL = 50
-N_CATEGORIES_SELECT = 10
+N_CATEGORIES_PULL = 1
+N_CATEGORIES_SELECT = 1
 
 def index(request):
     categories = sample(VHCategory.objects.order_by('title')[:N_CATEGORIES_PULL], N_CATEGORIES_SELECT)

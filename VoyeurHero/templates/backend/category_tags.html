@@ -1,0 +1,8 @@
+<div class="category_tags">
+    Tags: 
+    {% for tag in category.tags.all %}
+    <div class="category_tag">
+        {{tag.name}}
+    </div>
+    {% endfor %}
+</div>

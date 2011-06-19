@@ -1,0 +1,8 @@
+<div class="category">
+    {% include "backend/category_info.html" %}
+    <div class="category_posts">
+        {% for post in category.posts.all %}
+        {% include "backend/post.html" %}
+        {% endfor %}
+    </div>
+</div>

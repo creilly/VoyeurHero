@@ -1,4 +1,6 @@
 {% extends "backend/base.html" %}
 {% block content %}
-{% include "backend/categories.html" %}
+{% for category in categories %}
+{% include "backend/category_box.html" %}
+{% endfor %}
 {% endblock content %}
