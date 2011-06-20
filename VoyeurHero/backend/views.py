@@ -11,13 +11,9 @@ from haystack.query import SearchQuerySet
 from models import VHCategory
 from random import choice, sample, randint, shuffle
 
-<<<<<<< HEAD
-N_CATEGORIES_PULL = 50
-N_CATEGORIES_SELECT = 4
-=======
 N_CATEGORIES_PULL = 1
 N_CATEGORIES_SELECT = 1
->>>>>>> 7ea820a45282091b49502d7c0d75e1306e065800
+
 
 
 def categoryPage(request):

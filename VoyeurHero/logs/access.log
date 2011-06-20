@@ -2311,3 +2311,5 @@
 127.0.0.1 - - [18/Jun/2011:09:59:38 -0700] "GET / HTTP/1.0" 200 4674 "-" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_6_7) AppleWebKit/535.1 (KHTML, like Gecko) Chrome/14.0.794.0 Safari/535.1"
 127.0.0.1 - - [18/Jun/2011:18:21:39 -0700] "GET / HTTP/1.0" 200 6488 "-" "Mozilla/5.0 (compatible; Baiduspider/2.0; +http://www.baidu.com/search/spider.html)"
 127.0.0.1 - - [19/Jun/2011:04:45:06 -0700] "GET / HTTP/1.0" 200 4235 "-" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_6_7) AppleWebKit/535.1 (KHTML, like Gecko) Chrome/14.0.794.0 Safari/535.1"
+127.0.0.1 - - [20/Jun/2011:15:38:05 -0700] "GET / HTTP/1.0" 500 11598 "http://www.jetphillips.info/" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_6_7) AppleWebKit/535.1 (KHTML, like Gecko) Chrome/14.0.794.0 Safari/535.1"
+127.0.0.1 - - [20/Jun/2011:15:38:06 -0700] "GET /favicon.ico HTTP/1.0" 404 1338 "-" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_6_7) AppleWebKit/535.1 (KHTML, like Gecko) Chrome/14.0.794.0 Safari/535.1"
