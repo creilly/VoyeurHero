@@ -629,6 +629,7 @@ form input {
 	background-color: black;
 	padding: 10px;
 	text-align: left;
+	line-height: 20px;
 }
 
 .category_tags .category_tag, .post_tags .post_tag {

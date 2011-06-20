@@ -599,6 +599,7 @@ li:last-child .hentry, #content > .hentry {border: 0; margin: 0;}
     border-radius: 4px;
     box-shadow: 4px 4px 4px #444;
     max-width: 100%;
+	max-height: 20em;
 }
 
 .post .post_title {
@@ -613,4 +614,25 @@ li:last-child .hentry, #content > .hentry {border: 0; margin: 0;}
 
 form input {
 	display: run-in;
+}
+
+.comment_form {
+	text-align: left;
+} 
+
+.category_tags, .post_tags {
+	color: white;
+	background-color: black;
+	padding: 10px;
+	text-align: left;
+	line-height: 20px;
+}
+
+.category_tags .category_tag, .post_tags .post_tag {
+	display: inline;
+	margin: 4px;
+	padding: 3px;
+	border: 2px solid #bbb;
+	border-radius: 4px;
+	background-color: #ff8888;
 }

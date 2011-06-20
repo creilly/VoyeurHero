@@ -15,6 +15,7 @@ N_CATEGORIES_PULL = 1
 N_CATEGORIES_SELECT = 1
 
 
+
 def categoryPage(request):
     category_id = request.GET['category_id']
     return render_to_response('backend/category_page.html',dict(category=VHCategory.objects.get(id=category_id)), RequestContext(request))
