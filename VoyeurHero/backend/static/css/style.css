@@ -640,3 +640,7 @@ form input {
 	border-radius: 4px;
 	background-color: #00008B;
 }
+
+#login {
+	float: right;
+}

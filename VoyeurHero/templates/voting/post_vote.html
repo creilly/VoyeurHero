@@ -5,6 +5,7 @@
         {{ score.score }} point{{ score.score|pluralize }}
         after {{ score.num_votes }} vote{{ score.num_votes|pluralize }}
     </div>
+	{% if not user.is_anonymous %}
     <div class="post_vote_user">
         {% vote_by_user user on post as vote %}
 		{{ user }}: 
@@ -24,6 +25,11 @@
 		<button class="post_clear_vote" value="{{post.id}}">
 			ClearVote
 		</button>
-		
 	</div>
+	{% else %}
+	<div class="login_to_vote">
+			<a href="/accounts/login">Login to Vote!</a>
+			<a href="/accounts/register">Or Register!</a>
+	</div>
+	{% endif %}
 </div>

@@ -15,6 +15,7 @@ urlpatterns = patterns('',
     # Examples:
     (r'^post_vote/(?P<object_id>\d+)/(?P<direction>up|down|clear)vote/?$', xmlhttprequest_vote_on_object, vhpost_dict),
     (r'^accounts/', include('registration.urls')),
+    url(r'^logout/$', 'django.contrib.auth.views.logout', {'next_page': '/'}, name='auth_logout'),
     (r'^profiles/', include('profiles.urls')),
     (r'^comments/', include('django.contrib.comments.urls')),
     (r'^search/', include('haystack.urls')),
