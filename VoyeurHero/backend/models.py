@@ -1,6 +1,14 @@
 from django import forms
 from django.contrib import admin
 from django.db import models
+from django.contrib.auth.models import User
+
+class VHProfile(models.Model):
+    # This is the only required field
+    user = models.ForeignKey(User, unique=True)
+
+    lucky_number = models.IntegerField()
+
 # Create your models here.
 
 class VHTag(models.Model):
@@ -40,8 +48,5 @@ class VHCategory(models.Model):
 	tags = models.ManyToManyField('VHTag',verbose_name= 'Related Tags',null=True,blank=True)
 	def __unicode__(self):
 		return '%s: %i posts, %i tags' % (self.title, len(self.posts.all()), len(self.tags.all()))
-	
-admin.site.register(VHTag)
-admin.site.register(VHPost)
-admin.site.register(VHCategory)
+
 

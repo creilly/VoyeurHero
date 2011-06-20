@@ -1,17 +1,31 @@
 # Create your views here.
 from ImageOps import flip
+from VoyeurHero.backend.vhforms import VHPostForm
 from django import forms
 from django.http import HttpResponse
-from django.shortcuts import render_to_response
+from django.shortcuts import render_to_response, redirect
 from django.template.context import Context, RequestContext
 from django.utils.simplejson import dumps
+from django.views.decorators.csrf import csrf_protect
 from haystack.query import SearchQuerySet
 from models import VHCategory
-from django.views.decorators.csrf import csrf_protect
 from random import choice, sample, randint, shuffle
 
 N_CATEGORIES_PULL = 1
 N_CATEGORIES_SELECT = 1
+
+def loggedIn(request):
+    return redirect('/profiles/%s' % request.META['USER'])
+
+def submitNewPost(request):
+    post = VHPostForm(request.POST).save()
+    for category in post.categories.all():
+        category.posts.add(post)
+        category.save()
+    return redirect('/')
+
+def createPost(request):
+    return render_to_response('backend/newpost.html',dict(form = VHPostForm()),RequestContext(request))
 
 def index(request):
     categories = sample(VHCategory.objects.order_by('title')[:N_CATEGORIES_PULL], N_CATEGORIES_SELECT)

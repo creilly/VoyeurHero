@@ -11,6 +11,13 @@ ADMINS = (
 MANAGERS = ADMINS
 
 
+TEMPLATE_CONTEXT_PROCESSORS = (
+        'django.contrib.messages.context_processors.messages',
+        'django.contrib.auth.context_processors.auth',
+                               
+)
+
+
 
 ROOT_PATH = os.path.dirname(__file__)
 
@@ -24,6 +31,8 @@ TEMPLATE_DIRS = (
     # Always use forward slashes, even on Windows.                                                                                                                                 
     # Don't forget to use absolute paths, not relative paths.                                                                                                                      
 )
+
+
 
 
 # Local time zone for this installation. Choices can be found here:
@@ -109,6 +118,7 @@ INSTALLED_APPS = (
     'django.contrib.comments',
     'south',
     'threadedcomments',
+    'profiles',
     'dajaxice',
     'backend',
     'registration',
@@ -148,3 +158,5 @@ LOGGING = {
 }
 ACCOUNT_ACTIVATION_DAYS = 7
 COMMENTS_APP = 'threadedcomments'
+AUTH_PROFILE_MODULE = 'backend.VHProfile'
+LOGIN_REDIRECT_URL = '/loggedin'

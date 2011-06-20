@@ -7,8 +7,10 @@ admin.autodiscover()
 urlpatterns = patterns('',
     # Examples:
     (r'^accounts/', include('registration.urls')),
+    (r'^profiles/', include('profiles.urls')),
     (r'^comments/', include('django.contrib.comments.urls')),
     (r'^search/', include('haystack.urls')),
+    url(r'^loggedin/', 'backend.views.loggedIn',name='logged in page'),
     url(r'^backend/', include('backend.urls')),
     url(r'^$', 'backend.views.index', name='index'),
     url(r'^admin/doc/', include('django.contrib.admindocs.urls')),
