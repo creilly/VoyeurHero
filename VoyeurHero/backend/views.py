@@ -19,6 +19,11 @@ N_CATEGORIES_PULL = 1
 N_CATEGORIES_SELECT = 1
 >>>>>>> 7ea820a45282091b49502d7c0d75e1306e065800
 
+
+def categoryPage(request):
+    category_id = request.GET['category_id']
+    return render_to_response('backend/category_page.html',dict(category=VHCategory.objects.get(id=category_id)), RequestContext(request))
+
 def loggedIn(request):
     return redirect('/profiles/%s' % request.META['USER'])
 
