@@ -1,7 +1,36 @@
 {% extends "backend/base.html" %}
-{% block content %}
-<a href="/backend/newpost">New Post</a>
+{% block content %}<a href="/backend/newpost">New Post</a>
 {% for category in categories %}
 {% include "backend/category_box.html" %}
 {% endfor %}
 {% endblock content %}
+{% block scripts %}
+<script type="text/javascript">
+	{% include "backend/ajax_csrf_code.js" %}
+	function handle_voter(type) {
+		var fun = function(data) {
+			console.log(type + '! Score: ' + data.score.score);
+		}
+		return fun;
+	}
+    
+    function voter(type){
+        var fun = function(event){
+            id = event.target.value;
+            $.ajax({
+                dataType: 'json',
+                type: 'POST',
+                url: 'post_vote/' + id + '/' + type + 'vote/',
+                success: handle_voter(type)
+            });
+        }
+        return fun;
+    }
+    
+    $(function(){
+        $('.post_up_vote').click(voter('up'));
+        $('.post_down_vote').click(voter('down'));
+		$('.post_clear_vote').click(voter('clear'));
+    });
+</script>
+{% endblock scripts %}
