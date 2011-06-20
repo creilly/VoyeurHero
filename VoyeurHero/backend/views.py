@@ -20,7 +20,7 @@ def categoryPage(request):
     return render_to_response('backend/category_page.html',dict(category=VHCategory.objects.get(id=category_id)), RequestContext(request))
 
 def loggedIn(request):
-    return redirect('/profiles/%s' % request.META['USER'])
+    return redirect('/profiles/%s' % request.user)
 
 def submitNewPost(request):
     post = VHPostForm(request.POST).save()
