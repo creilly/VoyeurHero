@@ -108,6 +108,7 @@ INSTALLED_APPS = (
     'django.contrib.admindocs',
     'django.contrib.comments',
     'south',
+    'threadedcomments',
     'dajaxice',
     'backend',
     'registration',
@@ -146,3 +147,4 @@ LOGGING = {
     }
 }
 ACCOUNT_ACTIVATION_DAYS = 7
+COMMENTS_APP = 'threadedcomments'
