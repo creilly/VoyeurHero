@@ -9,11 +9,13 @@
     <div class="post_vote_user">
         {% vote_by_user user on post as vote %}
 		{{ user }}: 
+		<span class="post_vote_user_description">
 		{% if vote %}
 			{{ vote|vote_display:"Bodacious,Bogus" }}
 		{% else %}
 			No Vote
 		{% endif %}
+		</span>
     </div>
 	<div class="post_vote_vote">
 		<button class="post_up_vote" value="{{post.id}}">

@@ -19,7 +19,7 @@
 			post = $(jqString);
 			$('.post_vote_score',post).text(data.score.score);
 			$('.post_vote_num_votes',post).text(data.score.num_votes);
-			
+			$('.post_vote_user_description',post).text(mapper[type]);
 		}
 		return fun;
 	}
