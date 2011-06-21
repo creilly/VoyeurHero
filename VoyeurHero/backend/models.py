@@ -2,12 +2,13 @@ from django import forms
 from django.contrib import admin
 from django.db import models
 from django.contrib.auth.models import User
+from voting.managers import VoteManager
 
 class VHProfile(models.Model):
-    # This is the only required field
-    user = models.ForeignKey(User, unique=True)
+	 # This is the only required field
+	 user = models.ForeignKey(User, unique=True)
 
-    lucky_number = models.IntegerField()
+	 lucky_number = models.IntegerField()
 
 # Create your models here.
 
@@ -35,11 +36,11 @@ class VHPost(models.Model):
 			' reject large images. '
 			max_size = 10**5
 			if len(self.cleaned_data['image'].content) > max_size:
-			   raise forms.ValidationError(
-				   'Image must be less then %d bytes.' % max_size
-			   )
+				raise forms.ValidationError(
+					'Image must be less then %d bytes.' % max_size
+				)
 			else:
-			   return self.cleaned_data['image']
+				return self.cleaned_data['image']
 
 	
 class VHCategory(models.Model):
@@ -48,5 +49,4 @@ class VHCategory(models.Model):
 	tags = models.ManyToManyField('VHTag',verbose_name= 'Related Tags',null=True,blank=True)
 	def __unicode__(self):
 		return '%s: %i posts, %i tags' % (self.title, len(self.posts.all()), len(self.tags.all()))
-
 

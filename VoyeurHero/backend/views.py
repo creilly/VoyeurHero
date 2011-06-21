@@ -1,7 +1,9 @@
 # Create your views here.
 from ImageOps import flip
+from VoyeurHero.backend.models import VHPost
 from VoyeurHero.backend.vhforms import VHPostForm
 from django import forms
+from django.forms.models import ModelForm
 from django.http import HttpResponse
 from django.shortcuts import render_to_response, redirect
 from django.template.context import Context, RequestContext
@@ -10,10 +12,13 @@ from django.views.decorators.csrf import csrf_protect
 from haystack.query import SearchQuerySet
 from models import VHCategory
 from random import choice, sample, randint, shuffle
-from django.forms.models import ModelForm
+from voting.models import Vote
 
 N_CATEGORIES_PULL = 1
 N_CATEGORIES_SELECT = 1
+
+def topPosts(request):
+    return render_to_response('backend/top_posts.html', dict(posts =map(lambda x: x[0],list(Vote.objects.get_top(VHPost, 10)))), RequestContext(request))
 
 def categoryPage(request):
     category_id = request.GET['category_id']
