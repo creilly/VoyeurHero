@@ -10,18 +10,19 @@ from django.views.decorators.csrf import csrf_protect
 from haystack.query import SearchQuerySet
 from models import VHCategory
 from random import choice, sample, randint, shuffle
+from django.forms.models import ModelForm
 
 N_CATEGORIES_PULL = 1
 N_CATEGORIES_SELECT = 1
-
-
 
 def categoryPage(request):
     category_id = request.GET['category_id']
     return render_to_response('backend/category_page.html',dict(category=VHCategory.objects.get(id=category_id)), RequestContext(request))
 
 def loggedIn(request):
-    return redirect('/profiles/%s' % request.user)
+    if request.user.vhprofile_set.exists():
+        return redirect('/profiles/%s' % request.user)
+    return redirect('/profiles/create')
 
 def submitNewPost(request):
     post = VHPostForm(request.POST).save()

@@ -15,7 +15,7 @@ urlpatterns = patterns('backend.views',
                        url(r'^autocomplete$', 'autocomplete'),     
                        url(r'^newpost', 'createPost'),                                                                                                                 
                        url(r'^submit_new_post', 'submitNewPost'),                                                                                                                 
-                       url(r'^category', 'categoryPage'),                                                                                                                 
+                       url(r'^category', 'categoryPage'),                                                                                                           
 )
 
 

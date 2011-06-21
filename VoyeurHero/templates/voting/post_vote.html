@@ -1,9 +1,9 @@
-<div class="post_vote">
+<div class="post_vote" value="{{post.id}}">
     <div class="post_vote_totals">
         {% load voting_tags %}
         {% score_for_object post as score %}
-        {{ score.score }} point{{ score.score|pluralize }}
-        after {{ score.num_votes }} vote{{ score.num_votes|pluralize }}
+        <span class="post_vote_score">{{ score.score }}</span> point{{ score.score|pluralize }}
+        after <span class="post_vote_num_votes">{{ score.num_votes }}</span> vote{{ score.num_votes|pluralize }}
     </div>
 	{% if not user.is_anonymous %}
     <div class="post_vote_user">
@@ -17,13 +17,13 @@
     </div>
 	<div class="post_vote_vote">
 		<button class="post_up_vote" value="{{post.id}}">
-			UpVote
+			Bodacious
 		</button>
 		<button class="post_down_vote" value="{{post.id}}">
-			DownVote
+			Bogus
 		</button>
 		<button class="post_clear_vote" value="{{post.id}}">
-			ClearVote
+			Clear Vote
 		</button>
 	</div>
 	{% else %}
