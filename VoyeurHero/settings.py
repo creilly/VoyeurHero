@@ -122,6 +122,7 @@ INSTALLED_APPS = (
     'backend',
     'registration',
     'voting',
+    'analytical',
     'haystack',
 )
 
@@ -160,3 +161,4 @@ ACCOUNT_ACTIVATION_DAYS = 7
 COMMENTS_APP = 'threadedcomments'
 AUTH_PROFILE_MODULE = 'backend.VHProfile'
 LOGIN_REDIRECT_URL = '/loggedin'
+CLICKY_SITE_ID = '66442024'

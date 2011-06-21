@@ -1,4 +1,4 @@
-
+{% load analytical %}
 <!DOCTYPE html> 
 <html lang="es"> 
 	<head>
@@ -15,7 +15,8 @@
 		{% endblock links %}
 		{% block scripts %}
 		{% endblock scripts %}
-		
+		{% analytical_head_top %}
+        {% analytical_head_bottom %}
 	</head>
 	<body id="index" class="home"> 
 	<header id="banner" class="body">
@@ -53,5 +54,7 @@
 		
 		<p>2011 <a href="http://jetphillips.info">Jet Phillps Inception</a>.</p> 
 	</footer><!-- /#contentinfo --> 
+	{% analytical_body_top %}
+	{% analytical_body_bottom %}
 	</body>
 </html>
