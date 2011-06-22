@@ -586,12 +586,19 @@ li:last-child .hentry, #content > .hentry {border: 0; margin: 0;}
     font-size: 30pt;
     background-color: #faf0e6;
     color: #333;
+	
+}
+
+.category .category_title a {
+	text-decoration:none;
 }
 
 .post {
     background-color: #ddd;
     border: 2px solid #000;
     margin: 5px;
+	margin-top: 25px;
+	margin-bottom: 25px;
 }
 
 .post img {
@@ -614,11 +621,8 @@ li:last-child .hentry, #content > .hentry {border: 0; margin: 0;}
 
 form input {
 	display: run-in;
-}
-
-.comment_form {
 	text-align: left;
-} 
+}
 
 .category_tags, .post_tags {
 	color: white;
@@ -634,5 +638,9 @@ form input {
 	padding: 3px;
 	border: 2px solid #bbb;
 	border-radius: 4px;
-	background-color: #ff8888;
+	background-color: #00008B;
+}
+
+#login {
+	float: right;
 }

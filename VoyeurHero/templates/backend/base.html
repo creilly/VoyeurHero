@@ -1,4 +1,6 @@
 {% load analytical %}
+{% load static %}
+{% get_static_prefix as static_prefix %}
 <!DOCTYPE html> 
 <html lang="es"> 
 	<head>
@@ -50,7 +52,7 @@
 				<span class="role">Jet Phillips</span> 
 			</span><!-- /.primary --> 
 		
-			<img src="/vh/static/images/jet.jpg" alt="Jet Phillips Logo" class="photo" /> 
+			<img src="{{ static_prefix }}images/jet.jpg" alt="Jet Phillips Logo" class="photo" /> 
 		
 			<span class="bio">Voyeur Hero globalizes your happenstances</span> 
 		
