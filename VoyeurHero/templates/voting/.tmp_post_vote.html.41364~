@@ -18,14 +18,14 @@
 		</span>
     </div>
 	<div class="post_vote_vote">
-		<button class="post_vote_button post_up_vote" value="{{post.id}}">
-			<span>Bodacious</span>
+		<button class="post_up_vote" value="{{post.id}}">
+			Bodacious
 		</button>
-		<button class="post_vote_button post_down_vote" value="{{post.id}}">
-			<span>Bogus</span>
+		<button class="post_down_vote" value="{{post.id}}">
+			Bogus
 		</button>
-		<button class="post_vote_button post_clear_vote" value="{{post.id}}">
-			<span>Clear Vote</span>
+		<button class="post_clear_vote" value="{{post.id}}">
+			Clear Vote
 		</button>
 	</div>
 	{% else %}

@@ -13,12 +13,17 @@ from haystack.query import SearchQuerySet
 from models import VHCategory
 from random import choice, sample, randint, shuffle
 from voting.models import Vote
+from django.contrib.auth.decorators import login_required
+from profiles.views import profile_detail
 
 N_CATEGORIES_PULL = 1
 N_CATEGORIES_SELECT = 1
 
 def topPosts(request):
     return render_to_response('backend/top_posts.html', dict(posts =map(lambda x: x[0],list(Vote.objects.get_top(VHPost, 10)))), RequestContext(request))
+
+def userProfile(request,username):
+    return profile_detail(request,username, extra_context=dict(userPosts = VHPost.objects.filter(user=request.user)))
 
 def categoryPage(request):
     category_id = request.GET['category_id']
@@ -29,16 +34,10 @@ def loggedIn(request):
         return redirect('/profiles/%s' % request.user)
     return redirect('/profiles/create')
 
-def submitNewPost(request):
-    post = VHPostForm(request.POST).save()
-    for category in post.categories.all():
-        category.posts.add(post)
-        category.save()
-    return redirect('/')
-
 def createPost(request):
-    return render_to_response('backend/newpost.html',dict(form = VHPostForm()),RequestContext(request))
-
+    return image_viewer(request)
+    #return render_to_response('backend/newpost.html',dict(form = VHPostForm()),RequestContext(request))
+    
 def index(request):
     categories = sample(VHCategory.objects.order_by('title')[:N_CATEGORIES_PULL], N_CATEGORIES_SELECT)
     shuffle(categories)
@@ -54,11 +53,10 @@ def contact(request):
 def autocomplete(request):
     return HttpResponse(dumps([result.object.name for result in SearchQuerySet().autocomplete(tag_auto=request.GET['term'])]))
 
+def post_page(request, post):
+    return render_to_response('backend/post_page.html',dict(post=post),RequestContext(request))
 
-class ImageViewerForm(forms.Form):
-    image = forms.ImageField()
-
-
+@login_required
 def image_viewer(request):
     '''
     form to upload an image.
@@ -67,24 +65,14 @@ def image_viewer(request):
     '''
     if request.method != 'POST':
         # for GET, just show the empty form
-        form = ImageViewerForm()
+        form = VHPostForm()
     else:
-        form = ImageViewerForm(request.POST, request.FILES)
+        form = VHPostForm(request.POST, request.FILES)
         if form.is_valid():
-            uploadedImage = form.cleaned_data['image']
-
-            # the cleaned_data of a FileField is an 
-            # UploadedFile object. It's a small data container
-            # with no methods and just two properties:
-            filename = uploadedImage.filename
-            imageData = uploadedImage.content
-
-            #just for fun, let's use PIL to flip the image 
-            # upside-down and change to PNG format.
-            imageData = flip(imageData)
-
-            # note the mimetype; we're returning the image directly.
-            return HttpResponse(imageData, mimetype="image/png")
-
-    return render_to_response('test/image_viewer.html',
-                              Context(dict(form=form) ) )
+            post = form.save(commit=False)
+            post.user = request.user
+            post.save()
+            form.save_m2m()
+            post.saveAndStoreCategories()
+            return post_page(request, post)
+    return render_to_response('test/image_viewer.html',dict(form = form), RequestContext(request) )

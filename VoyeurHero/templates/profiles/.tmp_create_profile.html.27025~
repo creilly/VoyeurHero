@@ -1,8 +1,8 @@
 {% extends "backend/base.html" %}
 {% block content %}
-<h1>Edit Profile</h1>
+Create
 <form method="post" action="/profiles/create/">
 	{% csrf_token %}
 	{{form}}
-<input type="submit" name="post" class="submit-post" value="Post">
+	<input type="submit" name="post" class="submit-post" value="Post">
 {% endblock content %}

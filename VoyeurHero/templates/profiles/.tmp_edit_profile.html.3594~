@@ -1,0 +1,5 @@
+{% extends "backend/base.html" %}
+{% block content %}
+Edit
+{{form}}
+{% endblock content %}

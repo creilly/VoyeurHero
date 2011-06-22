@@ -6,6 +6,8 @@
 
 {{ form }}
 
+{% csrf_token %}
+
 <input type="submit" value="Continue" name="Continue" />
 
 </form>

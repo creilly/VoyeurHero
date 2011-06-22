@@ -1,0 +1,13 @@
+{% extends "backend/base.html" %}
+{% block content %}
+<h1>Profile</h1>
+<ul>
+	<li>
+		<b>User:</b> {{ profile.user }}
+	</li>
+	<li>
+		<b>Lucky Number: </b> {{ profile.lucky_number }}
+	</li>
+</ul>
+
+{% endblock content %}
