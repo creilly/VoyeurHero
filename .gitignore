@@ -5,3 +5,4 @@ VoyeurHero/constants.py
 */*.py~
 VoyeurHero/woosh_index
 *#
+VoyeurHero/backend/migrations

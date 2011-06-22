@@ -4,3 +4,4 @@ VoyeurHero/constants.py
 *.py~
 */*.py~
 VoyeurHero/woosh_index
+*#
