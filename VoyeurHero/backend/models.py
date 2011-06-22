@@ -18,13 +18,8 @@ class VHTag(models.Model):
 		return self.name
 
 class VHPost(models.Model):
-<<<<<<< HEAD
-	user = User()
-	picture = models.ImageField(upload_to='post_images',verbose_name = 'Post Picture', null = True,blank = True,default='post_images/mystery-man.jpg')
-=======
 	user = models.ForeignKey(User, editable=False, blank=False, null=False)
 	picture = models.ImageField(verbose_name = 'Post Picture', null = True,blank = True,default='post_images/mystery-man.jpg',upload_to = 'voyeurshots/%Y/%m/%d')
->>>>>>> 1801d3e6abcd20be130330e4f2bc0fb83e56c6f7
 	caption = models.CharField(max_length=10000, verbose_name = 'Caption for Picture')
 	post_date = models.DateTimeField(auto_now_add=True,verbose_name = 'Posted Date')
 	categories = models.ManyToManyField('VHCategory',verbose_name = 'Categories for Post',null = True, blank = True)

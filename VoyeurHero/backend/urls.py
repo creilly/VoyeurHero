@@ -13,9 +13,9 @@ urlpatterns = patterns('backend.views',
                        url(r'^contact$', 'contact'),
                        url(r'^search$', 'search'),                                                                                                                 
                        url(r'^autocomplete$', 'autocomplete'),     
-                       url(r'^newpost', 'createPost'),                                                                                                                                                                                                                               
+                       url(r'^newpost', 'createPost'),                                                                                                   
                        url(r'^category', 'categoryPage'),
-                       url(r'^top_posts', 'topPosts'),                                                                                                           
+                       url(r'^top_posts', 'topPosts',name='top_posts'),                                                                                                           
 )
 
 

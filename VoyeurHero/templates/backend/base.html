@@ -32,6 +32,7 @@
 				<li class="active"><a href="/">home</a></li> 
 				<li><a href="/backend/search">Category Search</a></li>
 				<li><a href="{% url haystack_search %}">Post Search</a></li> 
+				<li><a href="{% url backend:top_posts %}">Top Posts</a></li> 
 				<li><a href="/backend/contact">Contact</a></li>
 				{% if not user.is_anonymous %}
 				<li><a href="/profiles/{{user}}">{{user}}</a></li>
