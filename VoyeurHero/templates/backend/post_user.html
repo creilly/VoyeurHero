@@ -1,0 +1,5 @@
+{% if post.user %}
+<div class="post_user">
+    Poster: <a href="{% url profiles_profile_detail post.user %}">{{post.user}}</a>
+</div>
+{% endif %}

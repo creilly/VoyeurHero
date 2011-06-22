@@ -1,6 +1,4 @@
 {% load analytical %}
-{% load static %}
-{% get_static_prefix as static_prefix %}
 <!DOCTYPE html> 
 <html lang="es"> 
 	<head>
@@ -35,7 +33,7 @@
 				<li><a href="{% url backend:top_posts %}">Top Posts</a></li> 
 				<li><a href="/backend/contact">Contact</a></li>
 				{% if not user.is_anonymous %}
-				<li><a href="/profiles/{{user}}">{{user}}</a></li>
+				<li><a href="{% url profiles_profile_detail user %}">{{user}}</a></li>
 				{% endif %}
 			</ul>
 		</nav> 
@@ -53,7 +51,7 @@
 				<span class="role">Jet Phillips</span> 
 			</span><!-- /.primary --> 
 		
-			<img src="{{ static_prefix }}images/jet.jpg" alt="Jet Phillips Logo" class="photo" /> 
+			<img src="/vh/static/images/jet.jpg" alt="Jet Phillips Logo" class="photo" /> 
 		
 			<span class="bio">Voyeur Hero globalizes your happenstances</span> 
 		
