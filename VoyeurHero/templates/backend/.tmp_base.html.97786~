@@ -1,4 +1,4 @@
-
+{% load analytical %}
 <!DOCTYPE html> 
 <html lang="es"> 
 	<head>
@@ -15,16 +15,21 @@
 		{% endblock links %}
 		{% block scripts %}
 		{% endblock scripts %}
-		
+		{% analytical_head_top %}
+        {% analytical_head_bottom %}
+		{% include "google_analytics.html" %}
 	</head>
 	<body id="index" class="home"> 
 	<header id="banner" class="body">
-		<h1><a href="#">Voyeur Hero! <br /><strong>Look, You're Famous</strong></a></h1>
+		<h1><a href="/">Voyeur Hero! <br /><strong>Look, You're Famous</strong></a></h1>
+		<div id="login">
+			{% include "accounts/login_prompt.html" %}
+		</div>
 		<nav>
 			<ul> 
 				<li class="active"><a href="/">home</a></li> 
 				<li><a href="/backend/search">Category Search</a></li>
-				<li><a href="/search">Post Search</a></li> 
+				<li><a href="{% url haystack_search %}">Post Search</a></li> 
 				<li><a href="/backend/contact">contact</a></li> 
 			</ul>
 		</nav> 
@@ -50,5 +55,7 @@
 		
 		<p>2011 <a href="http://jetphillips.info">Jet Phillps Inception</a>.</p> 
 	</footer><!-- /#contentinfo --> 
+	{% analytical_body_top %}
+	{% analytical_body_bottom %}
 	</body>
 </html>

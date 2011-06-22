@@ -18,12 +18,23 @@ class VHTag(models.Model):
 		return self.name
 
 class VHPost(models.Model):
-	picture = models.ImageField(upload_to='post_images',verbose_name = 'Post Picture', null = True,blank = True,default='post_images/mystery-man.jpg')
+	user = models.ForeignKey(User, editable=False, blank=False, null=False)
+	picture = models.ImageField(verbose_name = 'Post Picture', null = True,blank = True,default='post_images/mystery-man.jpg',upload_to = 'voyeurshots/%Y/%m/%d')
 	caption = models.CharField(max_length=10000, verbose_name = 'Caption for Picture')
 	post_date = models.DateTimeField(auto_now_add=True,verbose_name = 'Posted Date')
 	categories = models.ManyToManyField('VHCategory',verbose_name = 'Categories for Post',null = True, blank = True)
 	tags = models.ManyToManyField('VHTag',verbose_name= 'Related Tags',null=True,blank=True)
 	title = models.CharField(max_length = 200)
+	
+	
+	def saveAndStoreCategories(self):
+		self.save()
+		for category in self.categories.all():
+			category.posts.add(self)
+			category.save()
+		return self
+		
+		
 
 	def __unicode__(self):
 		return '%s: Categories - %s' % (self.title, ','.join(cat.title for cat in self.categories.all()))

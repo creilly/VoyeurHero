@@ -1,0 +1,4 @@
+<div class="comments">
+		{% include "backend/post_comment_info.html" %}
+		{% include "backend/post_comment_form.html" %}
+</div>

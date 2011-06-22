@@ -4,6 +4,3 @@
 {% include "backend/post.html" %}
 {% endfor %}
 {% endblock content %}
-{% block scripts %}
-{% include "javascript/post_vote_code.js" %}
-{% endblock scripts %}

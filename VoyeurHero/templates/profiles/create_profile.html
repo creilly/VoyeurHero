@@ -1,6 +1,6 @@
 {% extends "backend/base.html" %}
 {% block content %}
-Create
+<h1>Create Profile</h1>
 <form method="post" action="/profiles/create/">
 	{% csrf_token %}
 	{{form}}
