@@ -45,7 +45,7 @@ def index(request):
 
 
 def search(request):
-    return render_to_response('backend/search.html',dict())
+    return render_to_response('backend/search.html',dict(), RequestContext(request))
 
 def contact(request):
     return render_to_response('backend/contact.html',dict())
