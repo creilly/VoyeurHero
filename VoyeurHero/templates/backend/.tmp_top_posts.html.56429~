@@ -1,6 +1,0 @@
-{% extends "backend/base.html" %}
-{% block content %}
-{% for post in posts %}
-{% include "backend/post.html" %}
-{% endfor %}
-{% endblock content %}
