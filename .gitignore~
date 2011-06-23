@@ -1,7 +1,0 @@
-VoyeurHero/constants.py
-*.pyc
-*/*.pyc
-*.py~
-*/*.py~
-VoyeurHero/woosh_index
-*#

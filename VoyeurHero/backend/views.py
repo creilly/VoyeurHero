@@ -1,5 +1,5 @@
 # Create your views here.
-from ImageOps import flip
+
 from VoyeurHero.backend.models import VHPost
 from VoyeurHero.backend.vhforms import VHPostForm
 from django import forms
@@ -19,45 +19,44 @@ from profiles.views import profile_detail
 N_CATEGORIES_PULL = 1
 N_CATEGORIES_SELECT = 1
 
-def topPosts(request):
-    return render_to_response('backend/top_posts.html', dict(posts =map(lambda x: x[0],list(Vote.objects.get_top(VHPost, 10)))), RequestContext(request))
+def topPosts( request ):
+    return render_to_response( 'backend/top_posts.html', dict( posts = map( lambda x: x[0], list( Vote.objects.get_top( VHPost, 10 ) ) ) ), RequestContext( request ) )
 
-def userProfile(request,username):
-    return profile_detail(request,username, extra_context=dict(userPosts = VHPost.objects.filter(user=request.user)))
+def userProfile( request, username ):
+    return profile_detail( request, username, extra_context = dict( userPosts = VHPost.objects.filter( user = request.user ) ) )
 
-def categoryPage(request):
-    category_id = request.GET['category_id']
-    return render_to_response('backend/category_page.html',dict(category=VHCategory.objects.get(id=category_id)), RequestContext(request))
+def categoryPage( request, category_id ):
+    return render_to_response( 'backend/category_page.html', dict( category = VHCategory.objects.get( id = category_id ) ), RequestContext( request ) )
 
-def loggedIn(request):
+def loggedIn( request ):
     if request.user.vhprofile_set.exists():
-        return redirect('/profiles/%s' % request.user)
-    return redirect('/profiles/create')
+        return redirect( '/profiles/%s' % request.user )
+    return redirect( '/profiles/create' )
 
-def createPost(request):
-    return image_viewer(request)
+def createPost( request ):
+    return image_viewer( request )
     #return render_to_response('backend/newpost.html',dict(form = VHPostForm()),RequestContext(request))
-    
-def index(request):
-    categories = sample(VHCategory.objects.order_by('title')[:N_CATEGORIES_PULL], N_CATEGORIES_SELECT)
-    shuffle(categories)
-    return render_to_response('backend/index.html',dict(categories=categories), RequestContext(request))
+
+def index( request ):
+    categories = sample( VHCategory.objects.order_by( 'title' )[:N_CATEGORIES_PULL], N_CATEGORIES_SELECT )
+    shuffle( categories )
+    return render_to_response( 'backend/index.html', dict( categories = categories ), RequestContext( request ) )
 
 
-def search(request):
-    return render_to_response('backend/search.html',dict(), RequestContext(request))
+def search( request ):
+    return render_to_response( 'backend/search.html', dict(), RequestContext( request ) )
 
-def contact(request):
-    return render_to_response('backend/contact.html',dict())
+def contact( request ):
+    return render_to_response( 'backend/contact.html', dict() )
 
-def autocomplete(request):
-    return HttpResponse(dumps([result.object.name for result in SearchQuerySet().autocomplete(tag_auto=request.GET['term'])]))
+def autocomplete( request ):
+    return HttpResponse( dumps( [result.object.name for result in SearchQuerySet().autocomplete( tag_auto = request.GET['term'] )] ) )
 
-def post_page(request, post):
-    return render_to_response('backend/post_page.html',dict(post=post),RequestContext(request))
+def post_page( request, post ):
+    return render_to_response( 'backend/post_page.html', dict( post = post ), RequestContext( request ) )
 
 @login_required
-def image_viewer(request):
+def image_viewer( request ):
     '''
     form to upload an image.
     shows you the image upside-down on POST.
@@ -67,12 +66,12 @@ def image_viewer(request):
         # for GET, just show the empty form
         form = VHPostForm()
     else:
-        form = VHPostForm(request.POST, request.FILES)
+        form = VHPostForm( request.POST, request.FILES )
         if form.is_valid():
-            post = form.save(commit=False)
+            post = form.save( commit = False )
             post.user = request.user
             post.save()
             form.save_m2m()
             post.saveAndStoreCategories()
-            return post_page(request, post)
-    return render_to_response('test/image_viewer.html',dict(form = form), RequestContext(request) )
+            return post_page( request, post )
+    return render_to_response( 'test/image_viewer.html', dict( form = form ), RequestContext( request ) )

@@ -1,6 +1,6 @@
+{% load voting_tags %}
 <div class="post_vote" value="{{post.id}}">
     <div class="post_vote_totals">
-        {% load voting_tags %}
         {% score_for_object post as score %}
         <span class="post_vote_score">{{ score.score }}</span> point{{ score.score|pluralize }}
         after <span class="post_vote_num_votes">{{ score.num_votes }}</span> vote{{ score.num_votes|pluralize }}
