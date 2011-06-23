@@ -1,5 +1,5 @@
 <div class="category_title">
-	<a href="/backend/category?category_id={{category.id}}">
+	<a href="{% url backend:category_page category.id %}">
     	{{category.title}}
 	</a>
 </div>
